@@ -81,6 +81,7 @@ padding: 30px;
 .skill-card:hover {
 transform: translateY(-10px) scale(1.03);
 box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+transition: 0.9s;
 }
 
 .skill-icon {
@@ -96,6 +97,7 @@ transition: width 1s ease-in-out;
 }
 .skill-card:hover .progress-bar {
 width: 100% !important; /* fills up smoothly on hover */
+transition: 2s;
 }
 .contact1{
     background-color: #1a1a1a;
@@ -108,7 +110,6 @@ width: 100% !important; /* fills up smoothly on hover */
 .prjt img{
   width: 100%;
   height: 400px;
-  object-fit: cover;
 }
 .img-box {
   position: relative;
@@ -145,15 +146,13 @@ width: 100% !important; /* fills up smoothly on hover */
 .img-box:hover .overlay {
   opacity: 1;              /* show overlay on hover */
 }
-  .hero .btn{
+  .btn{
     background-color: #201f1f;
     color: white;
   }
-  .hero .btn:hover{
-    color: #fe0707;
+  .btn:hover{
+    color: #3c3b3b;
     transform: scale(1.1);
     transition: 0.3s;
-  }
-  .contact .btn:hover{
-    color: #fe0707;
+    background-color: #eef0ef;
   }
