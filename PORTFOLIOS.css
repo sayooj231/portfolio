@@ -1,158 +1,222 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    background-color: #1a1a1a;
-  }
-  .navbar {
-    background: rgba(0,0,0,0.8);
-  }
-  .navbar a {
-    color: #f9f7f7;
-    font-weight: 500;
-  }
-  .nav-link:hover {
-    color: #ff4757;
-    
-  }
-  .hero {
-    height: 100vh;
-    background:url(/img/home2.avif) center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-  }
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  .section-title{
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    color: white;
-  }
-  .section-title:hover{
-    color:#ff4757 ;
-  }
-  .about1 p{
-    font-size: 15px;
-    font-weight: lighter;
-    color: white;
-    
-  }
-  .nav-link{
-    color: orange;
-  }
-  .progress {
-    height: 10px;
-  }
-  .skill2{
-   margin-top: 170px;
-   margin-bottom: 170px;
-  }
-  .sk2{
-    color: white;
-  }
-  .project-card {
-    transition: transform 0.3s;
-  }
-  .project-card:hover {
-    transform: translateY(-10px);
-  }
-  footer {
-    background: #111;
-    color: #aaa;
-    padding: 20px 0;
-    text-align: center;
-  }
-  footer a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.2rem;
-  }
- 
-  .skill-card {
-transition: all 0.3s ease-in-out;
-background: #0d0d0d;
-padding: 30px;
-}
-.skill-card:hover {
-transform: translateY(-10px) scale(1.03);
-box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-transition: 0.9s;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #1a1a1a;
 }
 
-.skill-icon {
-transition: transform 0.3s, color 0.3s;
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
 }
-.skill-card:hover .skill-icon {
-transform: scale(1.2) rotate(-5deg);
-color: #101010; /* highlight effect */
+
+.navbar a {
+  color: #f9f7f7;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: orange;
+}
+
+.nav-link:hover {
+  color: #ff4757;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url(/img/home2.avif) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.section-title:hover {
+  color: #ff4757;
+}
+
+/* ===== ABOUT ===== */
+.about1 p {
+  font-size: 15px;
+  font-weight: lighter;
+  color: white;
+}
+
+/* ===== SKILLS ===== */
+.skill2 {
+  margin-top: 170px;
+  margin-bottom: 170px;
+}
+
+.sk2 {
+  color: white;
+}
+
+.skill-card {
+  background: #0d0d0d;
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: 0.9s;
+}
+
+.progress {
+  height: 10px;
 }
 
 .progress-bar {
-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
-.skill-card:hover .progress-bar {
-width: 100% !important; /* fills up smoothly on hover */
-transition: 2s;
+
+/* =/* --- PROJECTS SECTION (Final Working Version) --- */
+.prjt {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 100px 0;
 }
-.contact1{
-    background-color: #1a1a1a;
-    color: white;
+
+.prjt .section-title {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2.5rem;
+  position: relative;
 }
-.prjt{
-    background-color: #1a1a1a;
-    color: white;
+
+.prjt .section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #ff4757;
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
-.prjt img{
-  width: 100%;
-  height: 400px;
+
+/* --- PROJECT GRID --- */
+.prjt .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
 }
+
+.prjt .col-md-6,
+.prjt .col-lg-3 {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- IMAGE BOX --- */
 .img-box {
   position: relative;
-  overflow: hidden;      /* keeps overlay inside */
-  border-radius: 1rem;   /* same rounding for img + overlay */
+  overflow: hidden;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 350px; /* consistent width across all */
+  height: 230px; /* ✅ fixed desktop height */
+  background: #000;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-box img {
   width: 100%;
-  display: block;
-  border-radius: 1rem;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
   transition: transform 0.4s ease;
 }
 
 .overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.6);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 1rem;
+  border-radius: 15px;
+  text-transform: capitalize;
 }
 
+/* --- HOVER EFFECT --- */
 .img-box:hover img {
-  transform: scale(1.05);   /* zoom effect */
+  transform: scale(1.05);
 }
 
 .img-box:hover .overlay {
-  opacity: 1;              /* show overlay on hover */
+  opacity: 1;
 }
-  .btn{
-    background-color: #201f1f;
-    color: white;
+
+.img-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 71, 87, 0.25);
+}
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 992px) {
+  .img-box {
+    height: 210px;
+    max-width: 100%;
   }
-  .btn:hover{
-    color: #3c3b3b;
-    transform: scale(1.1);
-    transition: 0.3s;
-    background-color: #eef0ef;
+}
+
+@media (max-width: 768px) {
+  .img-box {
+    height: 200px;
+    max-width: 100%;
   }
+}
+
+@media (max-width: 576px) {
+  .img-box {
+    height: 180px;
+    max-width: 100%;
+  }
+}
+
+
+
+/* ===== CONTACT & FOOTER ===== */
+.contact1 {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+footer {
+  background: #111;
+  color: #aaa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
